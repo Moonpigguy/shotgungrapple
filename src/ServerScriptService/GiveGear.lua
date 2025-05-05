@@ -2,8 +2,8 @@ local function giveGear(character)
 	local newGear = game:GetService("ReplicatedStorage").Gear:Clone()
 	newGear.Middle.HumanoidRootPart.Part1 = character:WaitForChild("HumanoidRootPart")
 	newGear.Parent = character
-	local newScript = game:GetService("ServerStorage").LocalScript:Clone()
-	newScript.Parent = character
+	local gearScript = game:GetService("ServerStorage").GearClient:Clone()
+	gearScript.Parent = character
 	local shotgunScript = game:GetService("ServerStorage").ShotgunClient:Clone()
 	shotgunScript.Parent = character
 	
